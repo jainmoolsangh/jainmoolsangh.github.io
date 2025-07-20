@@ -1,0 +1,1226 @@
+    <!-- Chapter Pages (Hidden by default) -->
+    <div id="colorado-chapter" class="page-section">
+        <div class="container" style="padding-top: 2rem;">
+            <a href="#" class="back-btn" onclick="showMainSite()">← Back to Main Site</a>
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h1 style="color: #8B4513; font-size: 3rem;">🏔️ Colorado Chapter</h1>
+                <p style="font-size: 1.3rem; color: #666;">Serving the Jain community in the beautiful state of Colorado</p>
+            </div>
+            
+            <div style="background: white; border-radius: 20px; padding: 3rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 3rem;">
+                <h2 style="color: #8B4513; margin-bottom: 2rem;">Welcome to Our Colorado Family</h2>
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
+                    Our Colorado Chapter, based in Aurora, has been serving the local Jain community since 2023. We are a vibrant community of families committed to living the principles of Jainism while contributing positively to our local Colorado communities.
+                </p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 3rem 0;">
+                    <div style="text-align: center; padding: 1.5rem;">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem;">👥</div>
+                        <h3 style="color: #8B4513;">20+ Members</h3>
+                        <p>Active families across Denver Metro</p>
+                    </div>
+                    <div style="text-align: center; padding: 1.5rem;">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem;">🎯</div>
+                        <h3 style="color: #8B4513;">15+ Events</h3>
+                        <p>Annual community gatherings</p>
+                    </div>
+                </div>
+                
+                <h3 style="color: #8B4513; margin: 2rem 0;">Our Leadership Team</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                    <div style="background: #f9f9f9; padding: 1.5rem; border-radius: 15px;">
+                        <h4>Mr. Jain</h4>
+                        <p style="color: #666; margin: 0.5rem 0;">Chapter President</p>
+                        <p style="font-size: 0.9rem;">Leading with wisdom and dedication</p>
+                    </div>
+                    <div style="background: #f9f9f9; padding: 1.5rem; border-radius: 15px;">
+                        <h4>Mr. Jain</h4>
+                        <p style="color: #666; margin: 0.5rem 0;">Chapter Vice President</p>
+                        <p style="font-size: 0.9rem;">Organizing events and outreach</p>
+                    </div>
+                    <div style="background: #f9f9f9; padding: 1.5rem; border-radius: 15px;">
+                        <h4>Mr. Jain</h4>
+                        <p style="color: #666; margin: 0.5rem 0;">Chapter Secretary</p>
+                        <p style="font-size: 0.9rem;">Engaging next generation</p>
+                    </div>
+                </div>
+                
+                <h3 style="color: #8B4513; margin: 2rem 0;">Contact Colorado Chapter</h3>
+                <div style="background: #f0f8ff; padding: 2rem; border-radius: 15px;">
+                    <p><strong>📍 Address:</strong> Community Center, Aurora, CO 80016</p>
+                    <p><strong>📧 Email:</strong> colorado@jainmoolsangh.org</p>
+                    <p><strong>📱 Phone:</strong> </p>
+                    <p><strong>⏰ Meeting Times:</strong>Sunday of every month, 10:00 AM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Post Pages -->
+    <div id="blog-post" class="page-section">
+        <div class="container" style="padding-top: 2rem;">
+            <a href="#" class="back-btn" onclick="showMainSite()">← Back to Blog</a>
+            <div id="blog-content" style="max-width: 800px; margin: 0 auto;">
+                <!-- Dynamic blog content will be inserted here -->
+            </div>
+        </div>
+    </div><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jain Mool Sangh - Compassion in Action</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        .header {
+            background: linear-gradient(135deg, #8B4513 0%, #CD853F 50%, #DEB887 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+        }
+        
+        .nav-menu a:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+        
+        .donate-nav {
+            background: linear-gradient(45deg, #FF6B35, #F7931E) !important;
+            border-radius: 25px !important;
+            padding: 0.7rem 1.5rem !important;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(255,107,53,0.3);
+        }
+        
+        .donate-nav:hover {
+            background: linear-gradient(45deg, #F7931E, #FF6B35) !important;
+            box-shadow: 0 6px 20px rgba(255,107,53,0.4);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(139,69,19,0.8), rgba(205,133,63,0.8)), 
+                        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><radialGradient id="lotus" cx="50%" cy="50%"><stop offset="0%" stop-color="%23FFE4B5"/><stop offset="100%" stop-color="%23DEB887"/></radialGradient></defs><circle cx="600" cy="300" r="200" fill="url(%23lotus)" opacity="0.3"/></svg>');
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .cta-button {
+            background: linear-gradient(45deg, #FF6B35, #F7931E);
+            color: white;
+            padding: 15px 35px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 8px 25px rgba(255,107,53,0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(255,107,53,0.4);
+        }
+        
+        /* Values Section */
+        .values {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #FFF8DC 0%, #FFFACD 100%);
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #8B4513;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(45deg, #FF6B35, #F7931E);
+            border-radius: 2px;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        
+        .value-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .value-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(45deg, #FF6B35, #F7931E);
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .value-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .value-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #8B4513;
+        }
+        
+        /* Initiatives Section */
+        .initiatives {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #F0F8FF 0%, #E6F3FF 100%);
+        }
+        
+        .initiatives-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        
+        .initiative-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .initiative-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .initiative-header {
+            background: linear-gradient(135deg, #8B4513, #CD853F);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .initiative-content {
+            padding: 2rem;
+        }
+        
+        .initiative-content h3 {
+            color: #8B4513;
+            margin-bottom: 1rem;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #FFF0F5 0%, #FFE4E1 100%);
+        }
+        
+        .about-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .about-content p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            color: #555;
+        }
+        
+        .quote {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            font-style: italic;
+            font-size: 1.3rem;
+            color: #8B4513;
+            border-left: 5px solid #FF6B35;
+            margin: 2rem 0;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #8B4513 0%, #CD853F 50%, #DEB887 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 3rem auto 0;
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.9);
+            color: #333;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #4A4A4A;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        .footer p {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Chapters Section */
+        .chapters {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #E6F7FF 0%, #F0F8FF 100%);
+        }
+        
+        .chapters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        
+        .chapter-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .chapter-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(45deg, #FF6B35, #F7931E);
+        }
+        
+        .chapter-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .chapter-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .chapter-status {
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .status-active {
+            background: #4CAF50;
+            color: white;
+        }
+        
+        .status-coming {
+            background: #FFC107;
+            color: #333;
+        }
+        
+        /* Blog Section */
+        .blog {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #FFF5EE 0%, #FFEEE6 100%);
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        
+        .blog-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .blog-image {
+            height: 200px;
+            background: linear-gradient(135deg, #8B4513, #CD853F);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+        
+        .blog-content {
+            padding: 2rem;
+        }
+        
+        .blog-meta {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-title {
+            color: #8B4513;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .read-more {
+            color: #FF6B35;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        
+        .read-more:hover {
+            color: #F7931E;
+        }
+        
+        /* Events Section */
+        .events {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #F0FFF0 0%, #E6FFE6 100%);
+        }
+        
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        
+        .event-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .event-date {
+            background: linear-gradient(135deg, #8B4513, #CD853F);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .event-day {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        
+        .event-month {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+        
+        .event-content {
+            padding: 2rem;
+        }
+        
+        .event-title {
+            color: #8B4513;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .event-location {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .register-btn {
+            background: linear-gradient(45deg, #4CAF50, #45a049);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .register-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(76,175,80,0.3);
+        }
+        
+        /* Donation Section */
+        .donation {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #FFE4B5 0%, #FFDAB9 100%);
+            text-align: center;
+        }
+        
+        .donation-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .donation-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .donation-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .donation-amount {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #8B4513;
+            margin-bottom: 1rem;
+        }
+        
+        .donation-purpose {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+        
+        .custom-amount {
+            max-width: 300px;
+            margin: 2rem auto;
+        }
+        
+        .amount-input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .big-donate-btn {
+            background: linear-gradient(45deg, #FF6B35, #F7931E);
+            color: white;
+            padding: 20px 50px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(255,107,53,0.3);
+        }
+        
+        .big-donate-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255,107,53,0.4);
+        }
+        
+        /* Page Sections (hidden by default) */
+        .page-section {
+            display: none;
+            min-height: 100vh;
+            padding-top: 100px;
+        }
+        
+        .page-section.active {
+            display: block;
+        }
+        
+        .back-btn {
+            background: #666;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-bottom: 2rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            background: #555;
+            transform: translateY(-2px);
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .values-grid,
+            .initiatives-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo"><img src="images\jms_logo1.png" width="20" height="20"></div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#values">Values</a></li>
+                <li><a href="#initiatives">Initiatives</a></li>
+                <li><a href="#chapters">Chapters</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#donate" class="donate-nav">Donate</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <img src="images/jms.png"></img>
+        <div class="hero-content">
+
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section id="values" class="values">
+        <div class="container">
+            <h2 class="section-title fade-in">Our Core Values</h2>
+            <div class="values-grid">
+                <div class="value-card fade-in">
+                    <div class="value-icon">🕊️</div>
+                    <h3>Ahimsa (Non-Violence)</h3>
+                    <p>At the heart of our mission lies the principle of non-violence toward all living beings. We promote compassionate living through peaceful actions and mindful choices.</p>
+                </div>
+                <div class="value-card fade-in">
+                    <div class="value-icon">💚</div>
+                    <h3>Compassion</h3>
+                    <p>We extend our hearts to all beings, working tirelessly to alleviate suffering and spread kindness through our humanitarian initiatives and community outreach.</p>
+                </div>
+                <div class="value-card fade-in">
+                    <div class="value-icon">⚖️</div>
+                    <h3>Ethical Living</h3>
+                    <p>We advocate for righteous conduct in all aspects of life, promoting moral values, integrity, and responsible stewardship of our planet and resources.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Initiatives Section -->
+    <section id="initiatives" class="initiatives">
+        <div class="container">
+            <h2 class="section-title fade-in">Our Initiatives</h2>
+            <div class="initiatives-grid">
+                <div class="initiative-card fade-in">
+                    <div class="initiative-header">
+                        <h3>🤲 Humanitarian Aid</h3>
+                    </div>
+                    <div class="initiative-content">
+                        <p>Supporting communities in need through disaster relief, food distribution, and medical assistance programs that embody our commitment to service and compassion.</p>
+                    </div>
+                </div>
+                
+                <div class="initiative-card fade-in">
+                    <div class="initiative-header">
+                        <h3>📚 Education & Philosophy</h3>
+                    </div>
+                    <div class="initiative-content">
+                        <p>Providing educational resources on Jain philosophy, organizing study groups, and offering spiritual guidance to help individuals on their path to enlightenment.</p>
+                    </div>
+                </div>
+                
+                <div class="initiative-card fade-in">
+                    <div class="initiative-header">
+                        <h3>🥬 Vegetarianism Advocacy</h3>
+                    </div>
+                    <div class="initiative-content">
+                        <p>Encouraging plant-based living through cooking workshops, nutritional education, and community events that celebrate compassionate dietary choices.</p>
+                    </div>
+                </div>
+                
+                <div class="initiative-card fade-in">
+                    <div class="initiative-header">
+                        <h3>🎭 Cultural Events</h3>
+                    </div>
+                    <div class="initiative-content">
+                        <p>Organizing festivals, spiritual gatherings, and cultural celebrations that strengthen our community bonds and preserve our rich Jain heritage.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title fade-in">About Jain Mool Sangh</h2>
+            <div class="about-content fade-in">
+                <p>Rooted in the sacred traditions of the Digambar Jain community and inspired by Mool Sangh, our organization stands as a beacon of hope and positive transformation in today's world.</p>
+                
+                <div class="quote">
+                    "Ahimsa paramo dharma" - Non-violence is the supreme virtue
+                </div>
+                
+                <p>We are committed to advancing the core values of Jainism through meaningful action. Our work encompasses humanitarian aid, spiritual education, environmental conservation, and community building—all guided by the eternal wisdom of Lord Mahavira.</p>
+                
+                <p>Through volunteerism, sustainable giving, and interfaith collaboration, we strive to empower individuals and families, nurturing inner peace while fostering social responsibility and harmony with all living beings.</p>
+                
+                <p>Join us in our mission to create a more compassionate world, one act of kindness at a time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chapters Section -->
+    <section id="chapters" class="chapters">
+        <div class="container">
+            <h2 class="section-title fade-in">Our Chapters</h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem;">Serving Jain communities across the nation</p>
+            <div class="chapters-grid">
+                <div class="chapter-card fade-in" onclick="showChapterPage('colorado')">
+                    <div class="chapter-icon">🏔️</div>
+                    <h3>Colorado Chapter</h3>
+                    <div class="chapter-status status-active">Active</div>
+                    <p>Serving the Denver Metro and Colorado communities with regular events, spiritual programs, and community service.</p>
+                    <p><strong>Location:</strong> Aurora, Colorado</p>
+                </div>
+                
+                <div class="chapter-card fade-in" onclick="showChapterPage('california')">
+                    <div class="chapter-icon">🌴</div>
+                    <h3>California Chapter</h3>
+                    <div class="chapter-status status-coming">Coming Soon</div>
+                    <p>Expanding to serve the vibrant Jain community in California. Join our mailing list for updates.</p>
+                    <p><strong>Planned Location:</strong> San Francisco Bay Area</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2 class="section-title fade-in">Recent Insights</h2>
+            <div class="blog-grid">
+                <div class="blog-card fade-in">
+                    <div class="blog-image">📿</div>
+                    <div class="blog-content">
+                        <div class="blog-meta">January 15, 2025 • Spiritual Guidance</div>
+                        <h3 class="blog-title">Practicing Ahimsa in Daily Life</h3>
+                        <p>Discover practical ways to incorporate non-violence into modern living, from dietary choices to environmental consciousness.</p>
+                        <a href="#" class="read-more" onclick="showBlogPost('ahimsa-daily')">Read More →</a>
+                    </div>
+                </div>
+                
+                <div class="blog-card fade-in">
+
+                </div>
+                
+
+                
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events">
+        <div class="container">
+            <h2 class="section-title fade-in">Upcoming Events</h2>
+            <div class="events-grid">
+                <div class="event-card fade-in">
+                    <div class="event-date">
+                        <div class="event-day">25</div>
+                        <div class="event-month">Jan 2025</div>
+                    </div>
+                    <div class="event-content">
+                        <h3 class="event-title">Mahavir Jayanti Celebration</h3>
+                        <p class="event-location">📍 Community Center, Aurora, CO</p>
+                        <p>Join us for a special celebration of Lord Mahavira's birth with spiritual discourse, cultural programs, and community meal.</p>
+                        <a href="#" class="register-btn" onclick="registerEvent('mahavir-jayanti')">Register Now</a>
+                    </div>
+                </div>
+
+                
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donate" class="donation">
+        <div class="container">
+            <h2 class="section-title fade-in" style="color: #8B4513;">Support Our Mission</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #666;">Your generous donation helps us continue our work of compassion and service</p>
+            
+            <div class="donation-options fade-in">
+                <div class="donation-card" onclick="selectDonation(25)">
+                    <div class="donation-amount">$25</div>
+                    <div class="donation-purpose">Supports one family meal at our community kitchen</div>
+                </div>
+                
+                <div class="donation-card" onclick="selectDonation(50)">
+                    <div class="donation-amount">$50</div>
+                    <div class="donation-purpose">Sponsors educational materials for children</div>
+                </div>
+                
+                <div class="donation-card" onclick="selectDonation(100)">
+                    <div class="donation-amount">$100</div>
+                    <div class="donation-purpose">Plants 20 trees in our environmental program</div>
+                </div>
+                
+                <div class="donation-card" onclick="selectDonation(250)">
+                    <div class="donation-amount">$250</div>
+                    <div class="donation-purpose">Supports a month of community outreach</div>
+                </div>
+            </div>
+            
+            <div class="custom-amount fade-in">
+                <h3 style="color: #8B4513; margin-bottom: 1rem;">Custom Amount</h3>
+                <input type="number" class="amount-input" placeholder="Enter amount ($)" id="customAmount">
+                <br>
+                <button class="big-donate-btn" onclick="processDonation()">Donate Now 🙏</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Get Involved</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Ready to join our mission of compassion? We'd love to hear from you.</p>
+            
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="interest">Area of Interest</label>
+                        <input type="text" id="interest" name="interest" placeholder="Volunteering, Donations, Events, etc.">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell us how you'd like to contribute to our mission..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Jain Mool Sangh. All rights reserved.</p>
+            <p>Guided by Truth • Inspired by Compassion • United in Service</p>
+        </div>
+    </footer>
+
+    <script>
+        // Enhanced JavaScript functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fade in animation on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all fade-in elements
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Form submission handler
+            document.querySelector('form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Simple form validation and feedback
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+                
+                if (name && email && message) {
+                    alert('Thank you for your message! We will get back to you soon. 🙏');
+                    this.reset();
+                } else {
+                    alert('Please fill in all required fields.');
+                }
+            });
+        });
+
+        // Chapter navigation functions
+        function showChapterPage(chapterName) {
+            // Hide main sections
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            // Show specific chapter page
+            const chapterPage = document.getElementById(chapterName + '-chapter');
+            if (chapterPage) {
+                chapterPage.classList.add('active');
+                window.scrollTo(0, 0);
+            } else {
+                // For chapters not yet implemented, show coming soon message
+                alert('🏗️ Chapter page coming soon! \n\nThis chapter is in development. Please check back later or contact us for more information.');
+                // Show main sections again
+                document.querySelectorAll('section').forEach(section => {
+                    section.style.display = 'block';
+                });
+            }
+        }
+
+        function showMainSite() {
+            // Hide all page sections
+            document.querySelectorAll('.page-section').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show main sections
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'block';
+            });
+            
+            window.scrollTo(0, 0);
+        }
+
+        // Blog functionality
+        function showBlogPost(postId) {
+            const blogPosts = {
+                'ahimsa-daily': {
+                    title: 'Practicing Ahimsa in Daily Life',
+                    date: 'January 15, 2025',
+                    category: 'Spiritual Guidance',
+                    content: `
+                        <h1 style="color: #8B4513; margin-bottom: 1rem;">Practicing Ahimsa in Daily Life</h1>
+                        <p style="color: #666; margin-bottom: 2rem;"><em>January 15, 2025 • Spiritual Guidance</em></p>
+                        
+                        <div style="background: white; border-radius: 20px; padding: 3rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); line-height: 1.8;">
+                            <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #8B4513; font-style: italic;">"Ahimsa is not merely non-killing. Ahimsa is complete harmlessness, as well as positive love." - Acharya Tulsi</p>
+                            
+                            <h2 style="color: #8B4513; margin: 2rem 0 1rem 0;">Understanding Ahimsa Beyond Non-Violence</h2>
+                            <p>Ahimsa, often translated as non-violence, encompasses much more than avoiding physical harm. It represents a complete way of living that considers the impact of our thoughts, words, and actions on all living beings.</p>
+                            
+                            <h2 style="color: #8B4513; margin: 2rem 0 1rem 0;">Practical Applications in Modern Life</h2>
+                            
+                            <h3 style="color: #CD853F; margin: 1.5rem 0 1rem 0;">Dietary Choices</h3>
+                            <p>The most visible practice of Ahimsa is through vegetarianism and veganism. This extends to being mindful about:</p>
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li>Choosing locally sourced, organic produce when possible</li>
+                                <li>Minimizing food waste through careful meal planning</li>
+                                <li>Supporting ethical farming practices</li>
+                            </ul>
+                            
+                            <h3 style="color: #CD853F; margin: 1.5rem 0 1rem 0;">Environmental Consciousness</h3>
+                            <p>Our Colorado Chapter has embraced environmental stewardship as a key expression of Ahimsa through tree plantation drives and clean-up initiatives.</p>
+                            
+                            <h3 style="color: #CD853F; margin: 1.5rem 0 1rem 0;">Mental and Emotional Ahimsa</h3>
+                            <p>Practicing non-violence in our thoughts and speech creates a more peaceful world. This includes avoiding gossip, practicing patience, and approaching conflicts with compassion.</p>
+                            
+                            <div style="background: #f0f8ff; padding: 2rem; border-radius: 15px; margin: 2rem 0; border-left: 5px solid #FF6B35;">
+                                <h3 style="color: #8B4513; margin-bottom: 1rem;">Daily Practice Suggestions</h3>
+                                <ul style="padding-left: 1.5rem;">
+                                    <li>Begin each day with a moment of gratitude for all living beings</li>
+                                    <li>Choose words that build up rather than tear down</li>
+                                    <li>Practice mindful consumption in all areas of life</li>
+                                    <li>Engage in regular meditation to cultivate inner peace</li>
+                                </ul>
+                            </div>
+                            
+                            <p>As we continue to practice Ahimsa in our daily lives, we contribute to creating a more compassionate world for all beings. Our Colorado Chapter welcomes you to join us in this beautiful journey of conscious living.</p>
+                        </div>
+                    `
+                },
+
+            };
+            
+            const post = blogPosts[postId];
+            if (post) {
+                document.getElementById('blog-content').innerHTML = post.content;
+                
+                // Hide main sections
+                document.querySelectorAll('section').forEach(section => {
+                    section.style.display = 'none';
+                });
+                
+                // Show blog post page
+                document.getElementById('blog-post').classList.add('active');
+                window.scrollTo(0, 0);
+            }
+        }
+
+        // Events functionality
+        function registerEvent(eventId) {
+            const events = {
+                'mahavir-jayanti': 'Mahavir Jayanti Celebration',
+                'food-drive': 'Monthly Food Drive',
+                'youth-workshop': 'Youth Philosophy Workshop',
+                'cleanup-drive': 'Environmental Clean-up Drive'
+            };
+            
+            const eventName = events[eventId];
+            if (eventName) {
+                alert(`🙏 Thank you for your interest in "${eventName}"!\n\nRegistration details have been sent to your email. We look forward to seeing you there!\n\nFor questions, contact: events@jainmoolsangh.org`);
+            }
+        }
+
+        // Donation functionality
+        let selectedAmount = 0;
+
+        function selectDonation(amount) {
+            selectedAmount = amount;
+            document.getElementById('customAmount').value = amount;
+            
+            // Visual feedback
+            document.querySelectorAll('.donation-card').forEach(card => {
+                card.style.background = 'white';
+                card.style.transform = 'scale(1)';
+            });
+            
+            event.target.closest('.donation-card').style.background = '#f0f8ff';
+            event.target.closest('.donation-card').style.transform = 'scale(1.05)';
+        }
+
+        function processDonation() {
+            const customAmount = document.getElementById('customAmount').value;
+            const donationAmount = customAmount || selectedAmount;
+            
+            if (donationAmount && donationAmount > 0) {
+                alert(`🙏 Thank you for your generous donation of ${donationAmount}!\n\nYou will be redirected to our secure payment processor to complete your donation.\n\n✨ Your contribution helps us continue our mission of compassion and service. ✨`);
+            } else {
+                alert('Please select or enter a donation amount.');
+            }
+        }
+
+        // Interactive hover effects for cards
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.value-card, .initiative-card, .chapter-card, .blog-card, .event-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
